@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Endangered Animals</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <fieldset>
+      <legend>Endangered Animal</legend>
+    <form id="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+
+      <label for="species">Species:</label>
+      <input type="text" id="species">
+
+      <label for="continent">Continent:</label>
+      <!-- <input type="text" id="continent"> -->
+      <select id="continent">
+      <option value="Europe">Europe</option>
+      <option value="Australasia">Australasia</option>
+      <option value="Africa">Africa</option>
+      <option value="North America">North America</option>
+      <option value="South America">South America</option>
+      <option value="Asia">Asia</option>
+    </select>
+
+      <input type="radio" id="keep" value="keep" name="keep"/>
+      <label for="keep">Keep this animal?</label>
+
+      <input type="radio" id="kill" value="kill" name="kill"/>
+      <label for="kill">Kill this animal?</label>
+
+
+      <button type="submit" id="submit_animal">Submit Animal</button>
+
+    </form>
+  </fieldset>
+    <div class="container">
+    <p id="form-result">animal details</p>
+    <div>
+  </body>
+</html>
