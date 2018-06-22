@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const form = document.querySelector('#form');
 
+
+//event handler
 const handleFormSubmit = function (event) {
   event.preventDefault();
 const formResult = document.querySelector('#form-result');
@@ -16,17 +18,30 @@ const formResult = document.querySelector('#form-result');
   };
   if (this.keep.checked && this.kill.checked){
     kill = "";
-    keep = "Please choose only one"
+    keep = "";
+    alert("Please choose only one option");
   };
 
-formResult.textContent = `${event.target.name.value} ${event.target.species.value}
-${event.target.continent.value}
-${keep}
-${kill}`;
+  const resultString = `${event.target.name.value} ${event.target.species.value}
+  ${event.target.continent.value}
+  ${keep}
+  ${kill}`;
 
+
+createParagraph(resultString, formResult);
+
+form.reset();
 }
 
+
+//event
 form.addEventListener('submit', handleFormSubmit);
 
+// helper function
+const createParagraph = function(content, container){
+  const paragraph = document.createElement('p');
+  paragraph.textContent = content;
+  container.appendChild(paragraph);
+};
 
   });

@@ -1,3 +1,13 @@
+
+
+body {
+  background-image: radial-gradient(circle, #D6A2E8, #D6A2E8, #D6A2E8, #5758BB, #5758BB);
+  font-family: 'Abel', sans-serif;
+  margin: 8em;
+  font-size: 1.5em;
+}
+
+
 .container {
   display: flex;
   flex-wrap: wrap;
